@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Viza';
+    src: url(./font/69_tall.ttf);
+}
+
+body{
+    background-color: black !important;
+}
+
+nav{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo{
+    width: 10%;
+    float: left;
+    transition: width 0.5s ease;
+}
+
+.nav-a{
+    width: fit-content;
+    float: right;
+    padding: 2rem;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+li{
+    list-style: none;
+    padding: 1rem;
+}
+
+a{
+    color: black !important;
+    text-decoration: none !important;
+    font-size: 1.2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.3s;
+}
+
+a:hover{
+    font-size: 1.22rem;
+}
+
+
+.sufevs:hover{
+    color: rgb(255, 46, 220) !important;
+}
+
+.menu-btn{
+    float: right;
+
+}
+
+i{
+    font-size: 2.5rem;
+    display: none;
+}
+
+@media only screen and (max-width: 1100px){
+    .container{
+        width: 70% !important;
+    }
+}
+
+
+@media only screen and (max-width: 850px) {
+    i{
+        display: block !important;
+    }
+    .ul-large{
+        display: none;
+    }
+}
+
+
+.show-menu{
+    display: flex !important;
+    flex-direction: column !important;
+    transition: all 0.5s ease;
+    background-color: rgba(192, 192, 192, 0.164);
+    border-radius: 100%;
+    padding: 3rem;
+    box-shadow: 20px 20px 20px 10px;
+}
+
+.bigger{
+    width: 20% !important;
+}
+
+.active{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 503px) {
+   a{
+    font-size: 1rem;
+   }
+}
+
+@media only screen and (max-width: 450px) {
+    .show-menu{
+    width: 100%;
+       border-radius: 0;
+       padding: 0;
+       box-shadow: 0 0 0 0;
+       background-color: white;
+       text-align: end;
+    }
+    .nav-a{
+        width: 100%;
+        padding: 0;
+    }
+ }
+
+ @keyframes anim_o {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.anim {
+    animation: anim_o 0.5s linear forwards;
+}
