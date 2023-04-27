@@ -46,22 +46,46 @@ element.addEventListener("mouseout", () => {
   element.innerText = originalText;
 });
 
-function Algorithmic(){
+function Algorithmic() {
   $.ajax({
-      type: "get",
-      url: "./algorithmic.html",
-      success: function (response) {
-          $('main').html(response);
-      }
+    type: "get",
+    url: "./algorithmic.html",
+    success: function (response) {
+      $("main").html(response);
+    },
   });
 }
 
-function main(){
+function main() {
   $.ajax({
-      type: "get",
-      url: "./main.html",
-      success: function (response) {
-          $('main').html(response);
-      }
+    type: "get",
+    url: "./main.html",
+    success: function (response) {
+      $("main").html(response);
+    },
   });
+}
+
+$(".main").click(function (e) {
+  e.preventDefault();
+  $(".main").addClass("active");
+  $(".algorithmic").removeClass("active");
+});
+
+$(".algorithmic").click(function (e) {
+  e.preventDefault();
+  $(".algorithmic").addClass("active");
+  $(".main").removeClass("active");
+});
+
+function audioo() {
+    $(".audio1").html(`
+  <audio autoplay controls> <source src="./audio/Aphex Twin - Xtal.mp3" type="audio/mp3"><p>not available :)</p></audio>
+  <span style="cursor:pointer" onclick="removeA()">(remove audio)</span>
+  `);
+  // });
+}
+
+function removeA(){
+  $('.audio1').html('');
 }
