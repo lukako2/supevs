@@ -45,3 +45,23 @@ element.addEventListener("mouseout", () => {
   clearInterval(interval);
   element.innerText = originalText;
 });
+
+function Algorithmic(){
+  $.ajax({
+      type: "get",
+      url: "./algorithmic.html",
+      success: function (response) {
+          $('main').html(response);
+      }
+  });
+}
+
+function main(){
+  $.ajax({
+      type: "get",
+      url: "./main.html",
+      success: function (response) {
+          $('main').html(response);
+      }
+  });
+}
