@@ -150,3 +150,13 @@ span{
   align-items: center;
   padding: 2rem;
 }
+.Qarad{
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.iframe{
+  width: 50vw;
+}
