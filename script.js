@@ -66,16 +66,35 @@ function main() {
   });
 }
 
+function brain() {
+  $.ajax({
+    type: "get",
+    url: "./brain.html",
+    success: function (response) {
+      $("main").html(response);
+    },
+  });
+}
+
 $(".main").click(function (e) {
   e.preventDefault();
   $(".main").addClass("active");
   $(".algorithmic").removeClass("active");
+  $(".brain").removeClass("active");
 });
 
 $(".algorithmic").click(function (e) {
   e.preventDefault();
   $(".algorithmic").addClass("active");
   $(".main").removeClass("active");
+  $(".brain").removeClass("active");
+});
+
+$(".brain").click(function (e) {
+  e.preventDefault();
+  $(".brain").addClass("active");
+  $(".main").removeClass("active");
+  $(".algorithmic").removeClass("active");
 });
 
 function audioo() {
@@ -83,7 +102,6 @@ function audioo() {
   <audio autoplay controls> <source src="./audio/Aphex Twin - Xtal.mp3" type="audio/mp3"><p>not available :)</p></audio>
   <span style="cursor:pointer" onclick="removeA()">(remove audio)</span>
   `);
-  // });
 }
 
 function removeA(){
